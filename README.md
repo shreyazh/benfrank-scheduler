@@ -6,8 +6,6 @@ Sure! Here's a clean, vintage-style `README.md` tailored for your **Benjamin Fra
 
 Recreate the discipline and structure of one of history’s most productive minds — **Benjamin Franklin** — with this retro-styled scheduler inspired directly from his original daily planner.
 
-![Franklin Schedule Style](./image.png)
-
 ---
 
 ## 📖 About
