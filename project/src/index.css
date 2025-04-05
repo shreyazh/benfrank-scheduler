@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f4e4bc;
+  font-family: 'Special Elite', cursive;
+}
