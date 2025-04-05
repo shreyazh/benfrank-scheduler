@@ -40,20 +40,7 @@ Designed with a nostalgic aesthetic — think **vintage paper, typewriter fonts*
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/shreyazh/benfrank-scheduler.git
-cd franklin-scheduler
-```
-
-### 2. Run Locally
-Just open `index.html` in your browser:
-```bash
-open index.html
-# or just double-click it
-```
-
-### 3. Fill in Your Schedule
+### Fill in Your Schedule
 - Reflect on your intentions.
 - Input your time-blocks.
 - Hit **"Save My Schedule"** and download your personalized PDF!
