@@ -9,30 +9,30 @@ interface TimeSlot {
 
 function App() {
   const [schedule, setSchedule] = useState<TimeSlot[]>([
-    { time: "5", description: "Rise, wash, and address Powerful Goodness; contrive day's business and take the resolution of the day; prosecute the present study; and breakfast." },
-    { time: "6", description: "" },
     { time: "7", description: "" },
     { time: "8", description: "" },
-    { time: "9", description: "Work" },
-    { time: "10", description: "" },
-    { time: "11", description: "" },
-    { time: "12", description: "Read or overlook my accounts, and dine." },
-    { time: "1", description: "" },
-    { time: "2", description: "" },
-    { time: "3", description: "Work" },
-    { time: "4", description: "" },
-    { time: "5", description: "" },
-    { time: "6", description: "" },
-    { time: "7", description: "Put things in their places, supper, music, or diversion, or conversation;" },
-    { time: "8", description: "examination of the day." },
     { time: "9", description: "" },
-    { time: "10", description: "" },
-    { time: "11", description: "" },
-    { time: "12", description: "" },
-    { time: "1", description: "Sleep" },
+    { time: "10", description: ""},
+    { time: "11", description: ""},
+    { time: "12", description: ""},
+    { time: "1", description: "" },
     { time: "2", description: "" },
     { time: "3", description: "" },
     { time: "4", description: "" },
+    { time: "5", description: "" },
+    { time: "6", description: "" },
+    { time: "7", description: "" },
+    { time: "8", description: "" },
+    { time: "9", description: "" },
+    { time: "10", description: ""},
+    { time: "11", description: ""},
+    { time: "12", description: ""},
+    { time: "1", description: "" },
+    { time: "2", description: "" },
+    { time: "3", description: "" },
+    { time: "4", description: "" },
+    { time: "5", description: "" },
+    { time: "6", description: "" },
   ]);
 
   const [morningReflection, setMorningReflection] = useState("");
@@ -55,23 +55,27 @@ function App() {
     const pdf = new jsPDF();
     let yPos = 20;
 
+    // Add Special Elite font
+    pdf.addFont(
+      'https://fonts.gstatic.com/s/specialelite/v18/XLYgIZbkc4JPUL5CVArUVL0nhncESXFtUsM.ttf',
+      'Special Elite',
+      'normal'
+    );
+
     // Set font
-    pdf.setFont("helvetica", "bold");
+    pdf.setFont("Special Elite");
     pdf.setFontSize(16);
     pdf.text("Daily Schedule", 105, yPos, { align: "center" });
     
     // Morning Question
     yPos += 20;
     pdf.setFontSize(12);
-    pdf.setFont("helvetica", "bold");
     pdf.text("The morning question, What good shall I do this day?", 20, yPos);
     yPos += 10;
-    pdf.setFont("helvetica", "normal");
     pdf.text(morningReflection || "[No reflection written]", 20, yPos);
 
     // Schedule
     yPos += 20;
-    pdf.setFont("helvetica", "bold");
     pdf.text("Schedule:", 20, yPos);
     yPos += 10;
 
@@ -80,9 +84,7 @@ function App() {
         pdf.addPage();
         yPos = 20;
       }
-      pdf.setFont("helvetica", "bold");
       pdf.text(`${slot.time}:`, 20, yPos);
-      pdf.setFont("helvetica", "normal");
       const description = slot.description || "-";
       pdf.text(description, 35, yPos);
       yPos += 10;
@@ -94,10 +96,8 @@ function App() {
       pdf.addPage();
       yPos = 20;
     }
-    pdf.setFont("helvetica", "bold");
     pdf.text("Evening question, What good have I done today?", 20, yPos);
     yPos += 10;
-    pdf.setFont("helvetica", "normal");
     pdf.text(eveningReflection || "[No reflection written]", 20, yPos);
 
     // Save the PDF
@@ -152,10 +152,12 @@ function App() {
         <div className="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-4 mb-8">
           <div className="border-2 border-black p-4">
             <p className="text-sm sm:text-base">
-              Evening question,<br />
-              What good have I done today?
+              Other Goals,<br />
+              To accomplish today:
             </p>
           </div>
+          <p>“Dost thou love life? Then do not squander Time; for that’s the Stuff Life is made of.”<br />
+- Poor Richard’s Almanack, 1746</p>
 
           <div className="border-2 border-black p-4">
             <textarea 
