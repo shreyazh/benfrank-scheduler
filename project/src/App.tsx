@@ -9,16 +9,6 @@ interface TimeSlot {
 
 function App() {
   const [schedule, setSchedule] = useState<TimeSlot[]>([
-    { time: "7", description: "" },
-    { time: "8", description: "" },
-    { time: "9", description: "" },
-    { time: "10", description: ""},
-    { time: "11", description: ""},
-    { time: "12", description: ""},
-    { time: "1", description: "" },
-    { time: "2", description: "" },
-    { time: "3", description: "" },
-    { time: "4", description: "" },
     { time: "5", description: "" },
     { time: "6", description: "" },
     { time: "7", description: "" },
@@ -33,6 +23,11 @@ function App() {
     { time: "4", description: "" },
     { time: "5", description: "" },
     { time: "6", description: "" },
+    { time: "7", description: "" },
+    { time: "8", description: "" },
+    { time: "9", description: "" },
+    { time: "10", description: ""},
+    { time: "11", description: ""},
   ]);
 
   const [morningReflection, setMorningReflection] = useState("");
